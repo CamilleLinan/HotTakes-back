@@ -21,6 +21,8 @@ app.use((req, res, next) => {
 
 // Conversion de la requête
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
 
 // Routes de l'API
 app.use('/api/auth', userRoutes);
