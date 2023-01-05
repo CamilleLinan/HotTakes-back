@@ -4,15 +4,17 @@ const fs = require('fs');
 // Créer une sauce
 exports.createSauce = (req, res, next) => {
     const sauceObject = req.file ? {
-        imageURL: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     } : { ...req.body };
     const userId = req.body.userId
     const name = req.body.name;
+    const heat = req.body.heat;
 
     const sauce = new Sauce({
         ...sauceObject,
         userId,
-        name
+        name,
+        heat
     });
 
     sauce.save()

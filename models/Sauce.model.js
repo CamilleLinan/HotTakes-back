@@ -8,7 +8,7 @@ const sauceSchema = new Schema ({
     description: { type: String, required: false },
     mainPepper: { type: String, required: false },
     imageUrl: { type: String, required: false },
-    heat: { type: Number, required: false },
+    heat: { type: Number, min: 1, max: 5, required: true },
     likes: { type: Number, required: false, default:0 },
     dislikes: { type: Number, required: false, default:0 },
     usersLiked: { type: [String], required: false },
