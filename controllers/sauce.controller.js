@@ -95,7 +95,7 @@ exports.getAllSauces = (req, res, next) => {
         .catch(error => res.status(404).json({ error }));
 };
 
-// Liker un post
+// Liker une sauce
 exports.likeSauce = (req, res, next) => {
     Sauce.findOne({ _id: req.params.id })
         .then(sauce => {(req.body.like)  
@@ -122,7 +122,7 @@ exports.likeSauce = (req, res, next) => {
         .catch(error => res.status(500).json({ error }));
 }
 
-// Liker un post
+// Disliker une sauce
 exports.dislikeSauce = (req, res, next) => {
     Sauce.findOne({ _id: req.params.id })
         .then(sauce => {(req.body.dislike)  
