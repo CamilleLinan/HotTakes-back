@@ -8,13 +8,19 @@ exports.createSauce = (req, res, next) => {
     } : { ...req.body };
     const userId = req.body.userId
     const name = req.body.name;
+    const manufacturer = req.body.manufacturer;
     const heat = req.body.heat;
-
+    const description = req.body.description;
+    const mainPepper = req.body.mainPepper;
+    
     const sauce = new Sauce({
         ...sauceObject,
         userId,
         name,
-        heat
+        manufacturer,
+        heat,
+        description,
+        mainPepper
     });
 
     sauce.save()
