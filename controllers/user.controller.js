@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const emailValidator = require('email-validator');
+const { signUpErrors } = require('../utils/errors.utils');
 
 // Import du modèle User
 const User = require('../models/User.model');
@@ -22,7 +23,10 @@ exports.signup = (req, res, next) => {
                 });
                 user.save()
                     .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
-                    .catch(error => res.status(400).json({ error }));
+                    .catch((error) => {
+                        const errors = signUpErrors(error)
+                        res.status(400).send({ errors })
+                    });
             })
             .catch(error => res.status(500).json({ error }));
         } else {
