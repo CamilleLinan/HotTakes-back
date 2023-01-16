@@ -1,23 +1,22 @@
-# Projet 6 : Hot Takes - OpenClassrooms
+# Projet personnel : Refonte Hot Takes Back
 
-Voici le serveur back end du projet 'HotTakes' d'OpenClassrooms.
++ Télécharger ' NodeJS ' si besoin ;
 
-## Prérequis et installation du Back end
++ Créer un fichier ' .env ' pour remplir les variables d'environnements comme indiquer sur le fichier dev.env ;
 
-+ Téléchargez 'Node.js' si besoin ;
++ Installer Node et toutes ses dépendances avec ' npm i ' ;
 
-+ Installez les modules avec 'npm install' ;
++ Lancer le serveur avec ' npm start ' ou avec ' npm run dev ' en local pour utiliser nodemon ;
 
-+ Vous pouvez démarrer le serveur avec 'nodemon server', il devrait se lancer sur le 'localhost' avec par défaut le port 3000.
+![Alt text](/refonteHotTakesCover.webp?raw=true "Cover Refonte Hot Takes OpenClassrooms")
 
-![Alt text](/hottakesCover.webp?raw=true "Cover HotTakes OpenClassrooms")
-
-+ Contexte : 
++ Contexte :
 Les sauces piquantes sont de plus en plus populaires, c'est pourquoi la marque de condiments à base de piment Piiquante souhaite développer une application web de critique des sauces piquantes appelée "Hot Takes".
 
-+ Objectifs : 
-Construire une API sécurisée avec ses models, controllers et routes. Les utilisateurs de l'application doivent pouvoir créer de nouvelles sauces, modifier ou supprimer leur sauce, ainsi que liker ou disliker toutes les sauces créées.
++ Objectifs :
+Construire une API sécurisée avec ses models, controllers et routes. Les utilisateurs de l'application doivent pouvoir créer de nouvelles sauces, modifier ou supprimer leur sauce, ainsi que liker ou disliker toutes les sauces créées. Le visuel de base de l'application étant plutôt austère, j'ai choisi de retravailler toute la partie front-end avec React. J'ai également retravaillé la partie back-end afin que le tout soit plus ergonomique.
 
-+ Langages utilisés : Node.js / Express.js / MongoDB
++ Langages utilisés :
+Node.js / Express.js / MongoDB
 
-Plus d'informations sur mon portfolio : https://camillelinan.com/project/Hot%20Takes
+Plus d'informations sur mon portfolio : https://camillelinan.com/project/Refonte%20Hot%20Takes
